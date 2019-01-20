@@ -1,0 +1,8 @@
+//player
+void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "pickup")
+               //要先给prefab【food】建立标签pickup
+            Destroy (collision.collider.gameObject);
+                      //Destroy(要销毁的东西);
+    }
