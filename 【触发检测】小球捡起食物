@@ -1,0 +1,7 @@
+//player
+
+void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "pickup")
+            Destroy (collider.gameObject);
+    } 
