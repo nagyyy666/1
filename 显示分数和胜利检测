@@ -1,0 +1,18 @@
+//player
+using UnityEngine.UI; //需要调用头文件
+
+public Text text;//只操作text组件
+private int score; 
+public GameObject wintext; //操纵整个游戏物体（让它激活）
+
+void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "pickup") {
+            score++;
+            text.text = score.ToString();//把int转换成字符串
+            if (score == 7) {
+                wintext.SetActive (true);
+            }
+            Destroy (collider.gameObject);
+        }
+    } 
