@@ -1,0 +1,6 @@
+//prefab【food】
+
+void Update () {
+        transform.Rotate (new Vector3 (0, 1, 0));    
+    }
+} 
